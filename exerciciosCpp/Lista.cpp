@@ -31,6 +31,7 @@ bool Lista::remover(int indice){
 		while(init < 10){
 			if(Lista::list[init] != NULL){
 				Lista::list[init] = Lista::list[init+1];
+				Lista::list[init+1] = NULL;
 				init++;
 				Lista::quant--;
 			}
