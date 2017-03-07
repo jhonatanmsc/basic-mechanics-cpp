@@ -18,7 +18,7 @@ void bubble(int* vetor){
 	}while(tamanho > 1);
 };
 
-void quick(int* vetor, int esq=0, int dir=0) {
+void quick(int* vetor, int esq, int dir) {
 	int pivo = esq, i,ch,j;         //Declaração das variavés e inicialização do pivo com o primeiro algarismo da sequencia
 	for(i=esq+1;i<=dir;i++){
 		j = i;
@@ -43,18 +43,19 @@ void quick(int* vetor, int esq=0, int dir=0) {
 int main() {
 	int tempIni01, tempIni02, tempFim01, tempFim02;
 
+	int numerosB[] = {5,4,3,1,2,6,8,7,10,9};
+	tempIni02 = clock();
+	quick(numerosB,0,9);//  metodo de ordenacao Quick
+	tempFim02 = clock();
+
 	int numerosA[] = {5,4,3,1,2,6,8,7,10,9};
 	tempIni01 = clock();
 	bubble(numerosA);//      metodo de ordenacao Bolha
 	tempFim01 = clock();
 
-	int numerosB[] = {5,4,3,1,2,6,8,7,10,9};
-	tempIni02 = clock();
-	quick(numerosB,0,10);//  metodo de ordenacao Quick
-	tempFim02 = clock();
 
-	cout << "Tempo gasto com o metodo de ordenacao bubble: " << (tempFim01 - tempIni01) << endl;
-	cout << "Tempo gasto com o metodo de ordenacao quick: " << (tempFim02 - tempIni02) << endl;
+	cout << "Clock gasto com o metodo de ordenacao quick: " << (tempFim01 - tempIni01) << endl;
+	cout << "Clock gasto com o metodo de ordenacao bubble: " << (tempFim02 - tempIni02) << endl;
 
 	return 0;
 }
