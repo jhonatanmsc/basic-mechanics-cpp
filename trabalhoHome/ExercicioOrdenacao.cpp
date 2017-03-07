@@ -40,15 +40,16 @@ void quick(int* vetor, int esq=0, int dir=0) {
 }
 
 int main() {
-	int numeros[] = {5,4,3,1,2,6,8,7,10,9};
 	int tempIni01, tempIni02, tempFim01, tempFim02;
 
+	int numeros01[] = {5,4,3,1,2,6,8,7,10,9};
 	tempIni01 = clock();
-	bubble(numeros);
+	bubble(numeros01);
 	tempFim01 = clock();
 
+	int numeros02[] = {5,4,3,1,2,6,8,7,10,9};
 	tempIni02 = clock();
-	quick(numeros);
+	quick(numeros02);
 	tempFim02 = clock();
 
 	cout << "Tempo gasto com o metodo de ordenacao bubble: " << (tempFim01 - tempIni01) << endl;
@@ -56,3 +57,4 @@ int main() {
 
 	return 0;
 }
+
